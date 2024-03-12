@@ -12,4 +12,5 @@ colors=["black","rad","purple","green"]
 # puts(pepole[1][1])
 # puts(pepole[2][1])
 colors[1]="red"
-puts(colors)
+# puts(colors)
+puts colors[1]
