@@ -1,2 +1,1 @@
- :age
-    # attr_reader :name, :age
+puts @a.shuffle
