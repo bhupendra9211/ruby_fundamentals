@@ -24,7 +24,7 @@ class Cat
 end
 
 cat=Cat.new("cathy",4)
-puts "Before: "+cat.inspect
+# puts "Before: "+cat.inspect
 
 cat.name="catherin"
 cat.age=5

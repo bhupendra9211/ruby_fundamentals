@@ -35,7 +35,7 @@ class Car
 end
 
 car=Car.new("toyota","black","5","160mph")
-car.inspect
+# car.inspect
 
 car.brand="tesla"
 car.color="black"
