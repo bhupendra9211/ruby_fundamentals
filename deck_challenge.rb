@@ -1,16 +1,25 @@
-# class Card
-# end
+class Card
+    attr_accessor :num, :face
+    def initialize(num,face)
+        @num=num
+        @face=face
+    end
+    def to_s
+        "#{num} of #{face}"
+    end
+end
 
 class Deck
-    attr_accessor :a, :s
+    attr_accessor :a
     def initialize
         @a=[]
-        @s=[]
+        # @s=[]
         card_number=["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
         card_type=["Clubs","Spades","Hearts","Diamonds"]
         card_number.each do |i|
             card_type.each do |j|
-                @a.push([i,j])
+                # @a.push([i,j])
+                @a.push(Card.new(i,j))
                 # puts "#{i} : #{j}"
             end
         end
@@ -19,12 +28,12 @@ class Deck
     def shuffle
         puts "----------After shuffle---------"
         # puts @a.shuffle
-        puts @s=@a.shuffle
+        puts @a.shuffle
     end
 
     def deal
         puts "********The cards is deal********"
-        puts @s.shift
+        puts @a.shift
     end
 
     def display
@@ -36,16 +45,21 @@ class Deck
         puts "Total card is : #{@a.length}"
     end
     def show_length_2
-        puts "Remaining number card is : #{@s.length}"
+        puts "Remaining number card is : #{@a.length}"
     end
 end
-
-
-obj1=Deck.new
-obj1.display
-obj1.show_length_1
-obj1.shuffle
-obj1.show_length_2
-obj1.deal
-obj1.deal
-obj1.show_length_2
+a=Deck.new
+# a=Card.new("1","Heart")
+# a.display
+a.shuffle
+a.deal
+a.show_length_2
+# obj1=Deck.new
+# obj1.display
+# obj1.display
+# obj1.show_length_1
+# obj1.shuffle
+# obj1.show_length_2
+# obj1.deal
+# obj1.deal
+# obj1.show_length_2
