@@ -11,6 +11,7 @@ card_number.each do |i|
 end
 # puts a
 # puts a.length
-puts a.pop
-puts a.length
+# puts a.pop
+# puts a.length
+
 
